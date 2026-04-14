@@ -1,0 +1,29 @@
+{
+  "name": "core32-rubic-lab",
+  "version": "1.0.0",
+  "description": "**Reversible Universal Binary Information Computer — Interactive Research Interface**",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab/issues"
+  },
+  "homepage": "https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab#readme",
+  "devDependencies": {
+    "vitest": "^4.1.4"
+  }
+}
