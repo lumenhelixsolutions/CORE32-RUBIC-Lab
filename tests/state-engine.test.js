@@ -308,7 +308,9 @@ describe('state-engine', () => {
     it('resets operation count to 0', () => {
       coreApplyDelta();
       coreReset();
-      expect(elements['cr-ops'].textContent).toBe(0);
+      // textContent in real DOM is always a string; in mock it stores
+      // whatever value is assigned (number 0 from totalOps).
+      expect(Number(elements['cr-ops'].textContent)).toBe(0);
     });
   });
 });
