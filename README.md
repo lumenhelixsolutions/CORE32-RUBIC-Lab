@@ -1,130 +1,132 @@
-# CORE-32 R.U.B.I.C. Laboratory v4.0
+# CORE32-RUBIC-Lab
 
-**Reversible Universal Binary Information Computer — Interactive Research Interface**
+<p align="center">
+  <a href="https://lumenhelix.com">
+    <img src="docs/assets/lumenhelix-logo.svg" alt="LumenHelix Solutions" width="180">
+  </a>
+</p>
 
-A browser-based laboratory for exploring the CORE-32 architecture: a 32-state reversible computing framework defined over ℤ₃₂, featuring heterogeneous lattice tessellations, a 512D GPU-accelerated S-Box, and a live state computer that demonstrates δ₃₂ phase duality, rotor permutations, and CNLT fault-tolerant verification.
+<h3 align="center">Browser laboratory for the CORE-32 reversible computing architecture</h3>
 
-> © 2025–2026 Christopher G. Phillips (Raziel Ali) — [Lumen Helix](https://lumenhelix.com)
-> Licensed under CC BY-NC (Non-commercial educational use only)
+<p align="center">
+  <a href="https://lumenhelixsolutions.github.io/CORE32-RUBIC-Lab/">
+    <img src="https://img.shields.io/badge/Launch_Page-CORE32-RUBIC-Lab-00D4FF?style=flat-square&logo=githubpages&logoColor=white" alt="Launch Page">
+  </a>
+  <a href="https://lumenhelix.com">
+    <img src="https://img.shields.io/badge/Built_by-LumenHelix-7C3AED?style=flat-square" alt="Built by LumenHelix">
+  </a>
+  <img src="https://img.shields.io/badge/license-CC-BY-NC-4.0-8A95A8?style=flat-square" alt="License">
+</p>
 
 ---
 
-## Quick Start
+**CORE32-RUBIC-Lab** is part of the [LumenHelix Solutions](https://lumenhelix.com) portfolio — applied symbolic dynamics & reversible computation for deterministic, traceable AI systems.
+
+CORE32-RUBIC-Lab is the LumenHelix interactive research interface for the CORE-32 reversible computing framework. It renders 32-state lattice tessellations, a 512D Cayley-Dickson S-Box, and a live state computer that proves phase duality and commutation theorems in the browser with no build step.
+
+## Why this exists
+
+- **See reversibility.** Every operation is self-inverse or invertible, making state transitions auditable by construction.
+- **Run instantly.** Open index.html from any static server — no transpiler, bundler, or cloud dependency.
+- **Extend safely.** Modular ES modules and unit tests let you modify math or rendering without breaking the whole lab.
+
+## Quick start
+
+Install and run CORE32-RUBIC-Lab in under two minutes.
+
+### macOS / Linux
 
 ```bash
 # Clone
-git clone https://github.com/YOUR_USERNAME/CORE32-RUBIC-Lab.git
+git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
 cd CORE32-RUBIC-Lab
 
-# Serve (any static server works)
+# Install & run
+git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+cd CORE32-RUBIC-Lab
 npx serve .
-# or
+```
+
+### Windows (PowerShell)
+
+```powershell
+# Clone
+git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+Set-Location CORE32-RUBIC-Lab
+
+# Install & run
+git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+Set-Location CORE32-RUBIC-Lab
+npx serve .
+```
+
+### Windows (Git Bash / WSL)
+
+```bash
+git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+cd CORE32-RUBIC-Lab
+git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+cd CORE32-RUBIC-Lab
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000` in a modern browser. No build step required.
+> **Device note:** CORE32-RUBIC-Lab is tested on Windows 11, macOS Sonoma, Ubuntu 22.04/24.04, and modern mobile browsers.
+
+## Full documentation
+
+Visit the launch page for architecture, API reference, and deployment guides:  
+**https://lumenhelixsolutions.github.io/CORE32-RUBIC-Lab/**
 
 ## Features
 
-### Four Interactive Modes
+| Feature | What it gives you |
+|---------|-------------------|
+| Four interactive modes | Cauldron D8xZ2, Triality D6xZ2, A2 lattice, and a 512D GPU-accelerated S-Box with 13,000+ instanced cubies. |
+| Live state computer | Demonstrates delta-32 phase duality, rotor permutations, commutation verification, and CNLT fault recovery. |
+| Zero build dependencies | Runs from any static server with ES modules and a global THREE.js include — no bundler required. |
+| Tested core | Vitest unit tests cover algebra, state-engine, topology, colormap, and config modules. |
 
-| Mode | Name | Description |
-|------|------|-------------|
-| M1 | **Cauldron D₈×ℤ₂** | 10-state permutation on four-vesica diagram. Rotor L = (2 3 4 6 5 8 7 9) |
-| M2 | **Triality D₆×ℤ₂** | Seed of Life with 3-cycle pair operators τ₁=(2 5), τ₂=(4 9), τ₃=(6 3) |
-| M3 | **A₂ Lattice** | Flower of Life with Generalized Commutation Theorem verification |
-| M4 | **512D GPU S-Box** | 13,000+ instanced Rubik's cubies with real-time Cayley-Dickson shader hashing |
-
-### CORE-32 State Computer
-
-Each of the 196 macro-cubes holds a real ℤ₃₂ state. Operations include:
-
-- **δ₃₂ Phase Dual** — x ⊕ 16 involution (self-inverse, proving reversibility)
-- **ρ Rotor Step** — 8-cycle Cauldron permutation on state digits
-- **Commutation Verification** — proves ρ₃(δ₃₂(x)) = δ₃₂(ρ₃(x)) across all nodes
-- **CNLT Fault Injection** — corrupts a node, isolates the fault cone
-- **CNLT Recovery** — reconstructs pre-fault state via inverse permutation stack
-
-### Telemetry Controls
-
-- Mutation rate, twist speed, wave amplitude/frequency
-- **Glyph Clock (Hz)** — controls Unicode iteration speed (0 = frozen, 60 = max volatility)
-- Three topology modes: Planar Manifold, Hex Beehive, Origami RAM
-
-### Oracle AI
-
-Optional Gemini API integration for contextual analysis of the lattice state.
-
-## Project Structure
+## Architecture at a glance
 
 ```
 CORE32-RUBIC-Lab/
-├── index.html              # HTML shell (markup only)
-├── css/
-│   └── styles.css          # All styling
-├── js/
-│   ├── main.js             # Entry point — boot, tabs, slider wiring
-│   ├── config.js           # Shared mutable state & constants
-│   ├── algebra.js          # δ₃₂, rotor maps, ρₘ, commutation math
-│   ├── colormap.js         # Turbo colormap, state→color mapping
-│   ├── state-engine.js     # CORE-32 state computer & grid renderer
-│   ├── oracle.js           # Gemini API client & chat panel
-│   ├── svg-modes.js        # SVG visualizations (Modes 1–3)
-│   ├── texture-atlas.js    # 4096-glyph Unicode texture generation
-│   ├── topology.js         # Planar / Beehive / Origami layouts
-│   ├── orbit-controls.js   # Manual spherical orbit camera
-│   └── sbox-renderer.js    # Three.js scene, shader injection, animation loop
-├── docs/
-│   └── ARCHITECTURE.md     # Technical deep-dive
-├── LICENSE
-├── .gitignore
-└── README.md
+├── index.html      HTML shell and THREE.js loader
+├── css/            Lab styling
+├── js/             ES modules: algebra, state-engine, renderer, oracle
+├── tests/          Vitest unit tests
+└── docs/           Deep-dive architecture notes
 ```
 
-## Architecture
+## Development
 
-The system is structured as ES modules with zero build dependencies:
+```bash
+# Serve locally (no build step)
+npx serve .
 
-```
-THREE.js (global)
-    │
-    ├── config.js ─────────── shared state (no deps)
-    ├── algebra.js ────────── pure math (no deps)
-    ├── colormap.js ───────── pure functions (no deps)
-    │
-    ├── oracle.js ─────────── imports config
-    ├── svg-modes.js ──────── standalone
-    ├── orbit-controls.js ─── standalone
-    ├── texture-atlas.js ──── uses THREE global
-    ├── topology.js ───────── imports config
-    │
-    ├── state-engine.js ───── imports config, algebra, colormap, oracle
-    ├── sbox-renderer.js ──── imports config, colormap, topology,
-    │                          texture-atlas, orbit-controls, state-engine
-    │
-    └── main.js ───────────── entry point, imports all modules
+# Run tests
+npm test
 ```
 
-## Key Mathematical Objects
+## Roadmap
 
-| Symbol | Definition | Role |
-|--------|-----------|------|
-| δ₃₂(x) | (x + 16) mod 32 ≡ x ⊕ 16 | Canonical phase dual involution |
-| L | (2 3 4 6 5 8 7 9) | 8-cycle Cauldron rotor |
-| M | {0, 1} | Membrane — topological boundary |
-| ρₘ(x) | m·x mod 2ⁿ | Global rotor permutation |
-| (A,B)(C,D) | (AC−D*B, DA+BC*) | 512D Cayley-Dickson multiplication |
+- [ ] Extended oracle AI integrations beyond Gemini
+- [ ] Exportable audit packets for every state transition
+- [ ] Parametric topology presets and recording exports
 
-## Browser Requirements
+## Support & consulting
 
-- Modern browser with WebGL support
-- ES module support (Chrome 61+, Firefox 60+, Safari 11+, Edge 16+)
-- Optional: Gemini API key for Oracle features
+Need deterministic AI systems with full traceability? LumenHelix builds reversible computation kernels, governance layers, and end-to-end AI integrations.
 
-## References
+- **Website:** https://lumenhelix.com
+- **Services:** AI diagnostics, B.Y.O. support packages, governance audits
+- **Research:** TEN² kernel, R.U.B.I.C. boundary discipline, C.O.R.E. constraint lens
 
-1. Phillips, C.G. (2025–2026). *Architectural Tessellation and Hyperdimensional Constraint Dynamics within the CORE-32 R.U.B.I.C. Framework*. LumenHelix Technical Report v4.0.
-2. Phillips, C.G. *Minimal Finite Permutation Representations with Triality-Type Symmetry from Circle-Packing Lattice Truncations*.
-3. Bennett, C.H. (1973). *Logical Reversibility of Computation*. IBM J. Res. Dev.
-4. Landauer, R. (1961). *Irreversibility and Heat Generation in the Computing Process*. IBM J. Res. Dev.
-5. Baez, J.C. (2002). *The Octonions*. Bull. Amer. Math. Soc. 39, 145–205.
+## License
+
+Released under the Creative Commons Attribution-NonCommercial 4.0 International License.
+
+---
+
+<p align="center">
+  <sub>Engineered by <a href="https://lumenhelix.com">LumenHelix Solutions</a> — Applied Symbolic Dynamics & Reversible Computation.</sub>
+</p>
