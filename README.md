@@ -33,8 +33,6 @@ CORE32-RUBIC-Lab renders the CORE-32 reversible computing framework in the brows
 ```bash
 git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
 cd CORE32-RUBIC-Lab
-git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
-cd CORE32-RUBIC-Lab
 npx serve .
 ```
 
@@ -43,16 +41,12 @@ npx serve .
 ```powershell
 git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
 Set-Location CORE32-RUBIC-Lab
-git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
-Set-Location CORE32-RUBIC-Lab
 npx serve .
 ```
 
 ### Windows (Git Bash / WSL)
 
 ```bash
-git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
-cd CORE32-RUBIC-Lab
 git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
 cd CORE32-RUBIC-Lab
 python3 -m http.server 8000
