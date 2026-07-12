@@ -1,7 +1,11 @@
 # CORE32-RUBIC-Lab
 
 <p align="center">
-  <img src="docs/assets/logo.svg" alt="CORE32-RUBIC-Lab logo" width="160">
+  <img src="docs/assets/hero.svg" alt="CORE32-RUBIC-Lab header" width="100%">
+</p>
+
+<p align="center">
+  <img src="docs/assets/logo.svg" alt="CORE32-RUBIC-Lab logo" width="120">
 </p>
 
 <h3 align="center">Reversible. Auditable. Alive.</h3>
@@ -9,9 +13,9 @@
 <p align="center">Browser laboratory for the CORE-32 reversible computing architecture.</p>
 
 <p align="center">
-  <a href="https://lumenhelixsolutions.github.io/CORE32-RUBIC-Lab/">Launch Page</a>
+  <a href="https://lumenhelixlab.github.io/CORE32-RUBIC-Lab/">Launch Page</a>
   <span> · </span>
-  <a href="https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab">GitHub</a>
+  <a href="https://github.com/lumenhelixlab/CORE32-RUBIC-Lab">GitHub</a>
   <span> · </span>
   <a href="https://lumenhelix.com">LumenHelix</a>
 </p>
@@ -31,7 +35,7 @@ CORE32-RUBIC-Lab renders the CORE-32 reversible computing framework in the brows
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+git clone https://github.com/lumenhelixlab/CORE32-RUBIC-Lab.git
 cd CORE32-RUBIC-Lab
 npx serve .
 ```
@@ -39,7 +43,7 @@ npx serve .
 ### Windows (PowerShell)
 
 ```powershell
-git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+git clone https://github.com/lumenhelixlab/CORE32-RUBIC-Lab.git
 Set-Location CORE32-RUBIC-Lab
 npx serve .
 ```
@@ -47,7 +51,7 @@ npx serve .
 ### Windows (Git Bash / WSL)
 
 ```bash
-git clone https://github.com/lumenhelixsolutions/CORE32-RUBIC-Lab.git
+git clone https://github.com/lumenhelixlab/CORE32-RUBIC-Lab.git
 cd CORE32-RUBIC-Lab
 python3 -m http.server 8000
 ```
